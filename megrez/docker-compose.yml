@@ -1,0 +1,39 @@
+version: "3"
+
+services:
+  megrez:
+    image: xshengtech/megrez:latest
+    container_name: megrez
+    restart: always
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - $PWD/config.yml:/app/config.yml
+    depends_on:
+      - "megrez-redis"
+      - "megrez-postgres"
+    ports:
+      - 34567:34567
+
+  megrez-postgres:
+    image: postgres:16-alpine
+    container_name: megrez-postgres
+    restart: always
+    volumes:
+      - $PWD/data/postgres:/var/lib/postgresql/data
+    environment:
+      - TZ=Asia/Shanghai
+      - POSTGRES_DB=XshengTechMEGREZ
+      - POSTGRES_USER=XshengTechMEGREZ
+      - POSTGRES_PASSWORD=XshengTechMEGREZ
+  
+  megrez-redis:
+    image: redis:7-alpine
+    container_name: megrez-redis
+    restart: always
+    volumes:
+      - $PWD/data/redis:/data
+
+networks:
+  default:
+    name: megrez-network
