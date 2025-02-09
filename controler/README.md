@@ -194,12 +194,12 @@ docker compose up -d
 docker pull ubuntu:22.04 # 这个必须拉取，否则数据盘扩容/缩容功能无法使用
 
 # 下面的是打包好的镜像，可以直接使用
-docker pull xshengtech/megrez:pytorch-2.3.1_cuda-12.1_python-3.11_ubuntu-22.04
-docker pull xshengtech/megrez:pytorch-2.4.0_cuda-12.1_python-3.12_ubuntu-22.04
 docker pull xshengtech/megrez:pytorch-1.8.1_cuda-11.1_python-3.8_ubuntu-20.04
 docker pull xshengtech/megrez:pytorch-1.10.2_cuda-11.1_python-3.9_ubuntu-20.04
+docker pull xshengtech/megrez:pytorch-1.13.1_cuda-11.7_python-3.10_ubuntu-22.04
 docker pull xshengtech/megrez:pytorch-2.0.1_cuda-11.8_python-3.10_ubuntu-22.04
 docker pull xshengtech/megrez:pytorch-2.1.2_cuda-12.1_python-3.10_ubuntu-22.04
-docker pull xshengtech/megrez:pytorch-1.13.1_cuda-11.7_python-3.10_ubuntu-22.04
+docker pull xshengtech/megrez:pytorch-2.3.1_cuda-12.1_python-3.11_ubuntu-22.04
+docker pull xshengtech/megrez:pytorch-2.4.0_cuda-12.1_python-3.12_ubuntu-22.04
 docker pull xshengtech/megrez:ubuntu-22.04
 ```
