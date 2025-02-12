@@ -118,7 +118,7 @@ systemctl restart docker
 生成 CDI 设备配置
 
 ```bash
-sudo nvidia-ctk cdi generate --output=/var/run/cdi/nvidia.yaml
+sudo nvidia-ctk cdi generate --output=/etc/cdi/nvidia.yaml
 ```
 
 查看 CDI 设备配置
