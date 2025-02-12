@@ -108,6 +108,11 @@ docker info
 
 ### 2.5 配置 CDI 设备
 
+> [!NOTE]
+> 每次升级 NVIDIA 驱动后都需要重新配置 CDI 设备
+> 
+> 或每次添加新的 GPU 后都需要重新配置 CDI 设备
+
 启用 Docker 的 CDI 特性
 
 ```bash
