@@ -10,6 +10,13 @@ database:
 redis:
   host: megrez-redis
   port: 6379
+smtp:
+  host:
+  port:
+  user:
+  password:
+  ssl: false
 system:
+  base_url: 
   verify: false
   mount_dir: 
