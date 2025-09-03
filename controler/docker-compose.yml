@@ -9,7 +9,7 @@ volumes:
 services:
   etcd:
     hostname: etcd
-    image: bitnami/etcd:3.4.28
+    image: bitnamilegacy/etcd:3.4.28
     container_name: etcd
     restart: unless-stopped
     environment:
