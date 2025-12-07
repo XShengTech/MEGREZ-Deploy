@@ -4,7 +4,7 @@ services:
   megrez:
     image: xshengtech/megrez:latest
     container_name: megrez
-    restart: always
+    restart: unless-stopped
     environment:
       - TZ=Asia/Shanghai
     volumes:
@@ -18,7 +18,7 @@ services:
   megrez-postgres:
     image: postgres:16-alpine
     container_name: megrez-postgres
-    restart: always
+    restart: unless-stopped
     volumes:
       - $PWD/data/postgres:/var/lib/postgresql/data
     environment:
@@ -30,7 +30,7 @@ services:
   megrez-redis:
     image: redis:7-alpine
     container_name: megrez-redis
-    restart: always
+    restart: unless-stopped
     volumes:
       - $PWD/data/redis:/data
 
